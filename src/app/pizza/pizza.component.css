@@ -1,0 +1,76 @@
+button {
+  margin-bottom: 5px;
+}
+
+.btn-group-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn:active {
+  background: aquamarine;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.card-carousel {
+  display: flex;
+}
+
+.card {
+  height: 100px;
+  width: 300px;
+
+}
+.active {
+  border:  solid 1px tomato;
+}
+
+.btn {
+  background: teal;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 1em;
+}
+
+.card-body {
+  background: aliceblue;
+}
+
+.logo {
+  height: 50px;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pizza {
+  box-sizing: border-box;
+  height: 150px;
+  color: gray;
+}
+
+.pizza.active {
+  border-color: black;
+  border-width: 3px;
+  color: black;
+}
+
+.pizza-topping {
+  margin-right: 3px;
+}
+
+.pizza-topping-close {
+  margin-left: 5px;
+}
+
+.toppings-menu {
+  width: 200px;
+}

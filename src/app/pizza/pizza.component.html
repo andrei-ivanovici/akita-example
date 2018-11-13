@@ -1,0 +1,25 @@
+<div class="centered">
+  <h2>Toppings</h2>
+  <div class="btn-group-vertical toppings-menu">
+    <button type="button" class="btn btn-primary" *ngFor="let topping of availableToppings" (click)="toggleTopping(topping)"> {{topping}} </button>
+  </div>
+
+  <h2>Pizzas</h2>
+</div>
+  <div class="card-carousel" *ngFor="let pizza of pizzas | async" (click)="setActivePizza(pizza.id)">
+    <div class="card pizza" [ngClass]="{'active': pizza.id === (activePizzaId|async)}">
+      <div class="card-body">
+        <img class="logo" src="https://img.clipartxtras.com/c286fc515e531e5fdb4aa839bc81fea9_pizza-clipart-margherita-pizza-pencil-and-in-color-pizza-clipart-pizza-margherita-clipart_1300-975.jpeg">
+        <div class="card-text" *ngIf="pizza.id === (activePizzaId|async)">
+          <h6>Toppings: </h6>
+          <span class="badge badge-primary pizza-topping" *ngFor="let topping of activePizzaToppings | async; let last = last;" (click)="toggleTopping(topping)">
+  {{topping}} <span class="pizza-topping-close">X</span>
+          </span>
+          <span *ngIf="!(activePizzaToppings | async).length">none selected.</span>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="centered">
+  <button  type="button" class="btn btn-success add-new" (click)="addPizza()">Add A New Pizza</button>
+</div>
